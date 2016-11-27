@@ -53,7 +53,7 @@ def main():
         if check_user_name(user_name,user_dict) == True:
             print("Please enter password")
             password = get_input()
-            checkp = check_password(user_name,user_dict, password)
+            checkp = check_password(user_name, user_dict, password)
             if checkp == True:
                 user_info = user_dict[user_name]
                 print_info(user_info)

@@ -1,6 +1,8 @@
 import csv
 
+
 class Database:
+
     def __init__(self, dbase_filename="data.csv"):
         self.dbase_filename = dbase_filename
         self.users = {}
@@ -9,9 +11,9 @@ class Database:
                 new_line = line.split(",")
                 self.users[new_line[0]] = new_line
 
-    def __getitem__(self, username):
+    def __getitem__(self, user_name):
         for line in self.users:
-            if line[username] == username:
+            if line[user_name] == user_name:
                 return line
 
     def add(self, new_user):
@@ -27,5 +29,6 @@ class Database:
                 f.write(",".join(self.users[key]))
                 f.write("\n")
 
+
 if __name__ == '__main__':
-    pass
+    
