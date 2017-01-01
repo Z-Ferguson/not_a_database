@@ -68,8 +68,10 @@ def main():
                 print_info(user_info)
             else:
                 print("That info is not correct")
+                continue
         else:
             print("That is not a current username. Please try again.")
+            main()
         while True:
             print("Would you like to add a user? y/n.")
             user_choice = get_input().lower()
